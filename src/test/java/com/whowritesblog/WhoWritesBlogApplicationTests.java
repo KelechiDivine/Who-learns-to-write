@@ -1,4 +1,4 @@
-package com.clone.whowritesblog;
+package com.whowritesblog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
