@@ -60,7 +60,8 @@ public class ClientRepositoryTest {
 		Assertions.assertThat(client).hasFieldOrPropertyWithValue("email", "oziomaOkoroafor@gmail.com");
 		Assertions.assertThat(client).hasFieldOrPropertyWithValue("isVerified", false);
 		
-
+		clientRepository.save(client);
+		
 		log.info("Successfully created client with email --> {}", client.getEmail());
 		log.info("Successfully created client with phone number --> {}", client.getPhoneNumber());
 	}
