@@ -21,12 +21,12 @@ public class GroupChat {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private Integer adminId;
 
 	@Column(nullable = false)
 	private LocalDate createdDate;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private Integer clientId;
 }
