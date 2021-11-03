@@ -1,17 +1,9 @@
-package com.whowritesblog.model;
-
-import lombok.*;
+package com.whowritesblog.dto;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-
-public class Client {
+public class RegisterClientDto {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,4 +39,6 @@ public class Client {
 	
 	@Column(nullable = false)
 	private Boolean isVerified;
+	
+	
 }

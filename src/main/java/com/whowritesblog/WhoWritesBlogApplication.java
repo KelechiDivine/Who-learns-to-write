@@ -8,6 +8,6 @@ public class WhoWritesBlogApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(WhoWritesBlogApplication.class, args);
-		System.out.println("Successfully ran chat  application.");
+		System.out.println("Successfully ran chat application.");
 	}
 }
