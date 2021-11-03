@@ -9,14 +9,15 @@ import java.util.List;
 
 public interface ClientService {
 	
-	void registerClient(RegisterClientDto registerClientDto) throws ClientException;
+	void registerClient(Client client) throws ClientException;
 	
-	Client findClientById(String id);
+	Client findClientById(Integer id);
 	
+	Client findClientByEmail(String email);
 	void updateClient(UpdateClientDto updateClientDto) throws ClientException;
 	
 	List<Client> findAllClient();
 	
-	void deleteClient(String id);
+	void deleteClient(Integer id) throws ClientException;
 	
 }

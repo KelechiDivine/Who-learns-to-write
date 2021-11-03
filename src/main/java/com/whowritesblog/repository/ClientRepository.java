@@ -14,4 +14,7 @@ public interface ClientRepository extends JpaRepository<Client, Integer> {
 		save(client);
 	}
 	
+	boolean existsByEmail(String email);
+	
+	Client findByEmail(String email);
 }
