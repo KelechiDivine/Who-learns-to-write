@@ -21,16 +21,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Slf4j
-//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 
 public class ClientRepositoryTest {
 
 	@Autowired
 	private ClientRepository clientRepository;
-	
-//	@Autowired
-//	private TestEntityManager testEntityManager;
-	
+
 	private Client client;
 	
 	@BeforeEach
@@ -84,6 +80,6 @@ public class ClientRepositoryTest {
 		Assertions.assertThat(client).isNotNull();
 		log.info("Found client in database --> {}", client.getId());
 		log.info("Found client by first name --> {}", client.getFirstname());
-		log.info("FOund client by email --> {}", client.getEmail());
+		log.info("Found client by email --> {}", client.getEmail());
 	}
 }
