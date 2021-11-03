@@ -27,4 +27,6 @@ public class ChatHistory {
 	@Column(nullable = false)
 	private LocalDate dateSaved;
 	
+	@Column(nullable = false)
+	private Boolean isDeleted;
 }

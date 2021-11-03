@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Columns;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -33,5 +32,8 @@ public class Chat {
 	
 	@Column(nullable = false)
 	private LocalDate dateCreated;
+	
+	@Column(nullable = false)
+	private Boolean isDeleted;
 	
 }
