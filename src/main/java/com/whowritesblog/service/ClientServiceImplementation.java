@@ -1,15 +1,17 @@
 package com.whowritesblog.service;
 
-import com.whowritesblog.dto.RegisterClientDto;
 import com.whowritesblog.dto.UpdateClientDto;
 import com.whowritesblog.exception.ClientException;
 import com.whowritesblog.model.Client;
 import com.whowritesblog.repository.ClientRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.runner.RunWith;
 import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Service;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -30,8 +32,12 @@ public class ClientServiceImplementation implements ClientService{
 		return  !clientRepository.existsById(id);
 	}
 	
+	public boolean clientDoesNotExistByPhoneNumber(String phoneNumber){
+		return !clientRepository.existsByPhoneNumber(phoneNumber);
+	}
+	
 	@Override
-	public void registerClient(Client client) throws ClientException {
+	public void registerClient(Client client, String url) throws ClientException {
 		
 		client.setFirstname(client.getFirstname());
 		client.setLastname(client.getLastname());
