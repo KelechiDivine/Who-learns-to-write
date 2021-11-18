@@ -1,4 +1,5 @@
 package com.whowritesblog.model;
 
-public class Role {
+public enum Role {
+    GROUP_ADMIN, GROUP_MEMBER, USER;
 }
