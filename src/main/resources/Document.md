@@ -1,0 +1,1 @@
+Each chat will have an automatically incrementing id. Most probably the sequence id generation
