@@ -2,14 +2,14 @@ package com.whowritesblog.exception;
 
 import java.security.PrivilegedActionException;
 
-public class ClientException extends Exception{
+public class UserException extends Exception{
 	
 	/**
 	 * Constructs a new exception with {@code null} as its detail message.
 	 * The cause is not initialized, and may subsequently be initialized by a
 	 * call to {@link #initCause}.
 	 */
-	public ClientException() {
+	public UserException() {
 		super();
 	}
 	
@@ -21,7 +21,7 @@ public class ClientException extends Exception{
 	 * @param message the detail message. The detail message is saved for
 	 *                later retrieval by the {@link #getMessage()} method.
 	 */
-	public ClientException(String message) {
+	public UserException(String message) {
 		super(message);
 	}
 	
@@ -39,7 +39,7 @@ public class ClientException extends Exception{
 	 *                unknown.)
 	 * @since 1.4
 	 */
-	public ClientException(String message, Throwable cause) {
+	public UserException(String message, Throwable cause) {
 		super(message, cause);
 	}
 	
@@ -57,7 +57,7 @@ public class ClientException extends Exception{
 	 *              unknown.)
 	 * @since 1.4
 	 */
-	public ClientException(Throwable cause) {
+	public UserException(Throwable cause) {
 		super(cause);
 	}
 	
@@ -75,7 +75,7 @@ public class ClientException extends Exception{
 	 *                           be writable
 	 * @since 1.7
 	 */
-	protected ClientException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+	protected UserException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
 }
